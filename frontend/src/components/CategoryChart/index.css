@@ -1,0 +1,98 @@
+/* General container styling with an enhanced look */
+.category-chart-container {
+  background-image: linear-gradient(to right, rgb(91, 166, 91), rgba(141, 186, 78, 0.033));
+  border: 2px solid #0c0909;
+  font-family: 'Bree Serif', "Times New Roman", Times, serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category-chart-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling for the chart heading */
+.category-chart-container h2 {
+  color: #fff;
+  background-color: #5ba65b;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.category-chart-container h2 u {
+  color: #000;
+}
+
+.category-chart-container h2:hover {
+  background-color: #6ebf6e;
+}
+
+/* Adding animation to the pie chart */
+.pie-chart {
+  animation: chartEntry 1s ease-in-out;
+}
+
+/* Animation keyframe for pie chart entry */
+@keyframes chartEntry {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Custom tooltip styling */
+.recharts-tooltip-wrapper {
+  background-color: rgba(0, 0, 0, 0.8) !important;
+  border-radius: 5px;
+  color: #fff !important;
+  padding: 5px !important;
+}
+
+.recharts-tooltip-wrapper .recharts-default-tooltip {
+  font-size: 14px;
+}
+
+/* Styling for legend icons and text */
+.recharts-legend-item text {
+  font-size: 1.2em !important;
+  font-weight: bold;
+  color: #333;
+}
+
+.recharts-legend-item:hover {
+  color: #5ba65b;
+}
+
+/* Extra styling for PieChart component */
+.pie-chart-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* Hover effect on legend */
+.recharts-legend-item:hover {
+  transform: scale(1.05);
+  transition: transform 0.2s ease;
+}
+
+/* Hover effect for Pie chart slices */
+.recharts-sector:hover {
+  cursor: pointer;
+  filter: brightness(1.2);
+}
